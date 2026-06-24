@@ -1,1 +1,786 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wine Bank Club - Tradelist</title>
+  <style>
+    /* Typography and Layout */
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif; margin: 0; display: flex; color: #222; background-color: #fafafa; }
+    
+    /* Left Navigation Sidebar */
+    nav { width: 280px; padding: 2rem; background: #fff; border-right: 1px solid #eee; height: 100vh; position: fixed; overflow-y: auto; box-sizing: border-box; }
+    nav h1 { font-size: 1.4rem; margin-bottom: 0.2rem; font-weight: 700; letter-spacing: -0.5px; }
+    nav p { font-size: 0.8rem; color: #666; margin-top: 0; }
+    nav h3 { font-size: 0.75rem; text-transform: uppercase; margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 0.3rem; letter-spacing: 1px; color: #888; }
+    nav ul { list-style: none; padding: 0; margin: 0.5rem 0 0 0; font-size: 0.85rem; line-height: 1.8; }
+    nav a { text-decoration: none; color: #555; display: block; }
+    nav a:hover { color: #000; font-weight: 500; }
 
+    /* Main Content Area */
+    main { margin-left: 280px; padding: 3rem 5rem; max-width: 1000px; background: #fff; min-height: 100vh; box-sizing: border-box; }
+    section { margin-bottom: 6rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 4rem; }
+    section:last-child { border-bottom: none; }
+    header { margin-bottom: 2.5rem; }
+    .region { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #999; font-weight: 600; }
+    h2.producer { font-size: 2.2rem; margin: 0.3rem 0; font-weight: 700; letter-spacing: -0.5px; }
+    .sub-region { font-size: 1rem; color: #555; font-style: italic; }
+
+    /* Description Grid */
+    .desc-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; font-size: 0.9rem; line-height: 1.6; color: #444; margin-bottom: 2.5rem;}
+    .bio p { margin-top: 0; text-align: justify; }
+    .highlight-box { background: #fdfdfd; border-left: 2px solid #222; padding: 0 0 0 1rem; }
+    .highlight-box span { font-weight: bold; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; display: block; margin-bottom: 0.4rem; color: #111; }
+    .highlight-box p { margin: 0; font-size: 0.85rem; color: #555; }
+
+    /* The Wine Table */
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th { text-align: left; font-weight: 500; font-size: 0.75rem; text-transform: uppercase; color: #888; border-bottom: 1px solid #ddd; padding-bottom: 0.6rem; letter-spacing: 0.5px; }
+    td { padding: 1rem 0; border-bottom: 1px solid #eee; vertical-align: top; font-size: 0.9rem; }
+    td.cuvee { width: 45%; padding-right: 2rem; }
+    .wine-name { font-weight: 600; display: inline; color: #111; }
+    .vintage { font-weight: bold; color: #444; margin-right: 0.4rem; }
+    .type-badge { font-size: 0.7rem; text-transform: uppercase; background: #f0f0f0; padding: 0.15rem 0.4rem; border-radius: 3px; margin-left: 0.5rem; color: #666; font-weight: 500; }
+    .status-badge { font-size: 0.7rem; text-transform: uppercase; background: #fff0f0; border: 1px solid #ffa3a3; padding: 0.15rem 0.4rem; border-radius: 3px; margin-left: 0.5rem; color: #d32f2f; font-weight: 600; }
+    td.price { width: 15%; text-align: right; font-weight: 600; font-size: 1rem; color: #000; }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <nav>
+    <h1>Wine Bank Club</h1>
+    <p>Prices in SGD · GST excluded<br>Tradelist Portfolio 2026</p>
+    
+    <h3>Champagne</h3>
+    <ul>
+      <li><a href="#diebolt-vallois">Diebolt-Vallois</a></li>
+      <li><a href="#dosnon">Dosnon</a></li>
+      <li><a href="#pierre-paillard">Pierre Paillard</a></li>
+      <li><a href="#mauzon-leroux">Mouzon Leroux</a></li>
+    </ul>
+
+    <h3>Burgundy Reds &amp; Whites</h3>
+    <ul>
+      <li><a href="#bruno-clavelier">Bruno Clavelier</a></li>
+      <li><a href="#anne-sigaut">Anne Sigaut</a></li>
+      <li><a href="#jean-grivot">Jean Grivot</a></li>
+      <li><a href="#bernard-bonin">Bernard Bonin</a></li>
+      <li><a href="#eric-forest">Eric Forest</a></li>
+      <li><a href="#bruno-lorenzon">Bruno Lorenzon</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN TRADELIST CONTENT -->
+  <main>
+    
+    <!-- DIEBOLT-VALLOIS -->
+    <section id="diebolt-vallois">
+      <header>
+        <div class="region">Champagne</div>
+        <h2 class="producer">Diebolt-Vallois</h2>
+        <div class="sub-region">Cramant · Côte des Blancs</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Based in the legendary Grand Cru village of Cramant, Diebolt-Vallois produces classic, pure, and intensely chalky Blanc de Blancs Champagnes. Under Jacques Diebolt and his children, the domaine has built an elite reputation for capturing the absolute structural precision of old-vine Chardonnay planted across Côte des Blancs limestone.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Benchmark grower Champagne. The Fleur de Passion is an absolute masterpiece of old-vine purity raised completely in barrel without malolactic fermentation.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Cuvée Blanc de Blancs</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$78.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Cuvée Rosé</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$83.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Cuvée Prestige</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$95.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Cuvée Millésimé</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$105.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2014</span> <span class="wine-name">Cuvée Fleur de Passion</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$220.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- DOSNON -->
+    <section id="dosnon">
+      <header>
+        <div class="region">Champagne</div>
+        <h2 class="producer">Dosnon</h2>
+        <div class="sub-region">Avirey-Lingey · Côte des Bar</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Nicolas Dosnon crafts intensely textured, winelike Champagnes in the Kimmeridgian clay-limestone hills of the Aube. Strongly influenced by Puligny-Montrachet vinification methods, all base juices are fermented and aged in used Puligny oak barrels, imbuing the final wines with spectacular breadth, structure, and mineral density.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>For lovers of vinous, food-friendly Champagne. The combination of dense Pinot Noir fruit and seasoned white Burgundy oak delivers deep complexity.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Récolte Noire</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$105.50</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Récolte Noire Zéro Dosage</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$114.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Récolte Rosé</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$114.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Récolte Blanche</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$117.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Éphémère</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$144.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Alliae</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$172.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PIERRE PAILLARD -->
+    <section id="pierre-paillard">
+      <header>
+        <div class="region">Champagne</div>
+        <h2 class="producer">Pierre Paillard</h2>
+        <div class="sub-region">Bouzy · Montagne de Reims</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Brothers Antoine and Quentin Paillard run this exceptional 11-hectare estate exclusively inside the Grand Cru terroir of Bouzy. Known globally for subverting the heavy, monolithic stereotype of Bouzy Pinot Noir, they use meticulous viticulture and low-dosage levels to produce single-parcel cuvées showing immense vibrance, chalky definition, and focus.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Rarely does Bouzy display this much cut and freshness. Don't skip their rare still Bouzy Rouge, a tiny-production Pinot Noir of immense clarity.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Les Parcelles XX – Bouzy Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$100.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">Les Terres Roses – Bouzy Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$129.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Taissy 1er Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$144.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Bouzy Rouge – Les Mignottes</span><span class="type-badge">Red</span></td>
+            <td class="price">$144.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Les Maillerettes – Bouzy Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$216.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Les Mottelettes – Bouzy Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$216.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Verzenay – Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$216.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Ludes – 1er Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$216.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2012</span> <span class="wine-name">La Grande Récolte – Bouzy Grand Cru</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$290.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MOUZON LEROUX -->
+    <section id="mauzon-leroux">
+      <header>
+        <div class="region">Champagne</div>
+        <h2 class="producer">Mouzon Leroux</h2>
+        <div class="sub-region">Verzy · Montagne de Reims</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Sébastien Mouzon is a dynamic biodynamic frontrunner in the Grand Cru village of Verzy. Farming with horses, promoting complete biodiversity, and preserving all seven traditional Champagne grape varieties, his native-yeast cuvées are deeply expressive, energetic, and completely transparent architectural models of terroir.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Highly demanded new wave natural grower. These allocations are freshly landed (NEW) and show incredible life, nerve, and textural focus.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">L'Atavique</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$83.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">L'Incandescent Rosé de Saignée</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$97.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">L'Ascendant Solera</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$105.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">L'Ineffable Blanc de Noirs</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$123.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">L'Angélique Blanc de Blancs</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$123.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Les Fervins Parcellaire</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$189.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">L'Opiniâtre Blanc de Blancs</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$189.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Coteaux Champenois 7 Cépages</span><span class="type-badge">Red</span></td>
+            <td class="price">$117.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">NV</span> <span class="wine-name">L'Atavique Tradition NV Magnum</span><span class="type-badge">Sparkling</span></td>
+            <td class="price">$180.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BRUNO CLAVELIER -->
+    <section id="bruno-clavelier">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Bruno Clavelier</h2>
+        <div class="sub-region">Vosne-Romanée · Côte de Nuits</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Bruno Clavelier is one of Burgundy’s most intellectual and deeply respected winemakers. A pioneer of certified biodynamic farming, his focus is entirely geared toward old-vine massal selections and parsing the intricate geologic layers of his soils. Using very minimal new oak and delicate extractions, Bruno lets the terroir speak with transparent, silk-textured clarity.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>A true connoisseur's domaine. His parcels in Vosne-Romanée and Chambolle are models of stunning perfume, structure, and long-term evolutionary potential.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Bourgogne Aligoté</span><span class="type-badge">White</span></td>
+            <td class="price">$88.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Bourgogne Aligoté</span><span class="type-badge">White</span></td>
+            <td class="price">$81.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Bourgogne Aligoté</span><span class="type-badge">White</span></td>
+            <td class="price">$65.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Bourgogne Passetoutgrain</span><span class="type-badge">Red</span></td>
+            <td class="price">$62.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Chambolle-Musigny 1er Cru La Combe d'Orveau</span><span class="type-badge">Red</span></td>
+            <td class="price">$316.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Chambolle-Musigny 1er Cru La Combe d'Orveau</span><span class="type-badge">Red</span></td>
+            <td class="price">$439.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Chambolle-Musigny 1er Cru La Combe d'Orveau</span><span class="status-badge">OOS</span></td>
+            <td class="price">$431.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Chambolle-Musigny 1er Cru La Combe d'Orveau</span><span class="type-badge">Red</span></td>
+            <td class="price">$393.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots</span><span class="type-badge">Red</span></td>
+            <td class="price">$361.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots</span><span class="type-badge">Red</span></td>
+            <td class="price">$360.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots</span><span class="type-badge">Red</span></td>
+            <td class="price">$399.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots</span><span class="type-badge">Red</span></td>
+            <td class="price">$433.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Corton Grand Cru Le Rognet</span><span class="type-badge">Red</span></td>
+            <td class="price">$320.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Corton Grand Cru Le Rognet</span><span class="type-badge">Red</span></td>
+            <td class="price">$317.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Corton Grand Cru Le Rognet</span><span class="type-badge">Red</span></td>
+            <td class="price">$341.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Corton Grand Cru Le Rognet</span><span class="type-badge">Red</span></td>
+            <td class="price">$364.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Gevrey-Chambertin 1er Cru Les Corbeaux</span><span class="type-badge">Red</span></td>
+            <td class="price">$274.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Gevrey-Chambertin 1er Cru Les Corbeaux</span><span class="type-badge">Red</span></td>
+            <td class="price">$283.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Gevrey-Chambertin 1er Cru Les Corbeaux</span><span class="type-badge">Red</span></td>
+            <td class="price">$290.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Gevrey-Chambertin 1er Cru Les Corbeaux</span><span class="type-badge">Red</span></td>
+            <td class="price">$317.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Vosne-Romanée 1er Cru Les Beaux Monts</span><span class="type-badge">Red</span></td>
+            <td class="price">$323.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Vosne-Romanée 1er Cru Les Beaux Monts</span><span class="type-badge">Red</span></td>
+            <td class="price">$312.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Vosne-Romanée 1er Cru Les Beaux Monts</span><span class="status-badge">OOS</span></td>
+            <td class="price">$302.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Vosne-Romanée 1er Cru Les Beaux Monts</span><span class="type-badge">Red</span></td>
+            <td class="price">$354.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Vosne-Romanée 1er Cru Les Beaux Monts</span><span class="type-badge">Red</span></td>
+            <td class="price">$363.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Vosne-Romanée La Combe Brûlée</span><span class="type-badge">Red</span></td>
+            <td class="price">$259.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Vosne-Romanée La Combe Brûlée</span><span class="type-badge">Red</span></td>
+            <td class="price">$200.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Vosne-Romanée La Combe Brûlée</span><span class="type-badge">Red</span></td>
+            <td class="price">$222.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Vosne-Romanée La Combe Brûlée</span><span class="type-badge">Red</span></td>
+            <td class="price">$282.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Vosne-Romanée Aux Brûlées Vieilles Vignes</span><span class="type-badge">Red</span></td>
+            <td class="price">$230.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Vosne-Romanée Hautes-Maizières</span><span class="type-badge">Red</span></td>
+            <td class="price">$224.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Vosne-Romanée Hautes-Maizières</span><span class="type-badge">Red</span></td>
+            <td class="price">$217.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Vosne-Romanée Hautes-Maizières</span><span class="type-badge">Red</span></td>
+            <td class="price">$232.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Vosne-Romanée Hautes-Maizières</span><span class="type-badge">Red</span></td>
+            <td class="price">$222.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ANNE SIGAUT -->
+    <section id="anne-sigaut">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Domaine Anne et Hervé Sigaut</h2>
+        <div class="sub-region">Chambolle-Musigny · Côte de Nuits</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>This understated husband-and-wife estate has quietly become a critical darling for quintessential Chambolle-Musigny. Harvesting entirely by hand and practicing meticulous farming across an array of high-quality Premier Crus, Anne and Hervé craft incredibly silky, dark-fruited, and elegantly mineral Pinot Noirs that highlight pure refinement.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Stunning value for highly coveted Chambolle terroir. Their premier crus exhibit glorious aromatic weight without heavy structural overload.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny Les Bussières</span><span class="type-badge">Red</span></td>
+            <td class="price">$137.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Châtelots</span><span class="type-badge">Red</span></td>
+            <td class="price">$213.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Fuées</span><span class="type-badge">Red</span></td>
+            <td class="price">$212.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Groseilles</span><span class="type-badge">Red</span></td>
+            <td class="price">$170.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Groseilles</span><span class="type-badge">Red</span></td>
+            <td class="price">$177.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots</span><span class="type-badge">Red</span></td>
+            <td class="price">$197.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Noirots (Library)</span><span class="type-badge">Red</span></td>
+            <td class="price">$213.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Sentiers</span><span class="type-badge">Red</span></td>
+            <td class="price">$206.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny 1er Cru Les Sentiers (Library)</span><span class="type-badge">Red</span></td>
+            <td class="price">$234.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Chambolle-Musigny Village</span><span class="type-badge">Red</span></td>
+            <td class="price">$134.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Clos de la Roche Grand Cru</span><span class="type-badge">Red</span></td>
+            <td class="price">$447.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Morey-Saint-Denis 1er Cru Les Charrières</span><span class="type-badge">Red</span></td>
+            <td class="price">$151.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Morey-Saint-Denis 1er Cru Les Charrières</span><span class="type-badge">Red</span></td>
+            <td class="price">$144.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Morey-Saint-Denis 1er Cru Les Millandes</span><span class="type-badge">Red</span></td>
+            <td class="price">$173.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Morey-Saint-Denis 1er Cru Les Millandes</span><span class="type-badge">Red</span></td>
+            <td class="price">$172.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- JEAN GRIVOT -->
+    <section id="jean-grivot">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Domaine Jean Grivot</h2>
+        <div class="sub-region">Vosne-Romanée · Côte de Nuits</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Domaine Jean Grivot stands as one of the timeless, aristocratic monoliths of Vosne-Romanée. Currently managed by Étienne Grivot and his children, the family produces exceptionally precise, focused, and structured Pinot Noirs built for serious decades-long cellar maturation. These wines are celebrated for their dense, velvety texture and pristine clarity.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Blue-chip collectible Burgundy. From the flawless architectural structure of Les Beaux-Monts up to the mythological heights of Richebourg Grand Cru.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Vosne-Romanée Rouge</span><span class="type-badge">Red</span></td>
+            <td class="price">$185.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Nuits-Saint-Georges 1er Cru « Roncière »</span><span class="type-badge">Red</span></td>
+            <td class="price">$306.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Vosne-Romanée 1er Cru « Les Beaux-Monts »</span><span class="type-badge">Red</span></td>
+            <td class="price">$405.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Vosne-Romanée 1er Cru « Les Suchots »</span><span class="type-badge">Red</span></td>
+            <td class="price">$460.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Clos de Vougeot Grand Cru</span><span class="type-badge">Red</span></td>
+            <td class="price">$428.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Échezeaux Grand Cru</span><span class="type-badge">Red</span></td>
+            <td class="price">$605.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2017</span> <span class="wine-name">Richebourg Grand Cru</span><span class="type-badge">Red</span></td>
+            <td class="price">$2,447.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BERNARD BONIN -->
+    <section id="bernard-bonin">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Domaine Bernard-Bonin</h2>
+        <div class="sub-region">Meursault · Côte de Beaune</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Run by Véronique Bonin and Nicolas Bernard, this tiny 7-hectare estate has exploded into one of the most cult-followed, heavily allocated white Burgundy properties on earth. Utilizing meticulous biodynamic farming, early harvests, no sulfur additions until bottling, and expansive barrel aging, they create wildly energetic, crystalline, and brilliantly chiseled expressions of Meursault.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Among the hardest-to-source cult white Burgundies in existence. Masterful tension, reduction, and deeply concentrated palate energy.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Bourgogne Blanc Initiales B.B.</span><span class="type-badge">White</span></td>
+            <td class="price">$360.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Bourgogne Blanc Initiales B.B.</span><span class="type-badge">White</span></td>
+            <td class="price">$305.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Meursault 1er Cru Charmes-Dessus</span><span class="type-badge">White</span></td>
+            <td class="price">$1,111.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Meursault 1er Cru Genevrières</span><span class="type-badge">White</span></td>
+            <td class="price">$1,070.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Meursault 1er Cru Genevrières</span><span class="type-badge">White</span></td>
+            <td class="price">$961.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Meursault 1er Cru Genevrières</span><span class="type-badge">White</span></td>
+            <td class="price">$763.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Meursault Clos du Cromin</span><span class="type-badge">White</span></td>
+            <td class="price">$589.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Meursault Clos du Cromin</span><span class="type-badge">White</span></td>
+            <td class="price">$646.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Meursault Le Limozin</span><span class="type-badge">White</span></td>
+            <td class="price">$449.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Meursault Les Tillets</span><span class="type-badge">White</span></td>
+            <td class="price">$598.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Meursault Les Tillets</span><span class="type-badge">White</span></td>
+            <td class="price">$622.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Meursault Les Tillets</span><span class="type-badge">White</span></td>
+            <td class="price">$448.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2020</span> <span class="wine-name">Meursault La Rencontre</span><span class="type-badge">White</span></td>
+            <td class="price">$417.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2018</span> <span class="wine-name">Meursault Village Vieilles Vignes</span><span class="type-badge">White</span></td>
+            <td class="price">$508.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2019</span> <span class="wine-name">Meursault Village Vieilles Vignes</span><span class="type-badge">White</span></td>
+            <td class="price">$395.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ERIC FOREST -->
+    <section id="eric-forest">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Éric Forest</h2>
+        <div class="sub-region">Vergisson · Mâconnais</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Farming high-altitude parcels on the striking limestone cliffs of Vergisson, Éric Forest channels the soul of precision winemaking. Mentored directly by the iconic Jean-Marie Guffens, Éric applies incredible dynamic handling in the cellar, picking by hand and barrel fermenting to create complex, intensely saline, and mineral-driven Pouilly-Fuissé.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>Incredible value. These wines rival top-tier Côte de Beaune premier crus at a mere fraction of the price.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Mâcon-Pierreclos Le Clos Des Charmes</span><span class="type-badge">White</span></td>
+            <td class="price">$94.90</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Pouilly-Fuissé L'ÂME Forest</span><span class="type-badge">White</span></td>
+            <td class="price">$91.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Pouilly-Fuissé 1er Cru Les Crays</span><span class="type-badge">White</span></td>
+            <td class="price">$110.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BRUNO LORENZON -->
+    <section id="bruno-lorenzon">
+      <header>
+        <div class="region">Burgundy</div>
+        <h2 class="producer">Domaine Bruno Lorenzon</h2>
+        <div class="sub-region">Mercurey · Côte Chalonnaise</div>
+      </header>
+      <div class="desc-grid">
+        <div class="bio">
+          <p>Bruno Lorenzon has single-handedly elevated Mercurey onto the world stage. An uncompromising purist, his high-density vineyards are farmed organically with absolute obsession. In the cellar, Bruno uses custom-made oak barrels with no toast, producing pure, chiseled, incredibly vibrant reds and whites that possess staggering architectural tension.</p>
+        </div>
+        <div class="highlight-box">
+          <span>Why Wine Bank</span>
+          <p>An insider favorite that regularly outperforms far more prestigious appellations in blind tastings. Exceptional structure and terroir transparency.</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Cuvée</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Montagny Blanc 1er Cru Les Truffières</span><span class="type-badge">White</span></td>
+            <td class="price">$99.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2022</span> <span class="wine-name">Mercurey Rouge Le Chapitre</span><span class="type-badge">Red</span></td>
+            <td class="price">$89.00</td>
+          </tr>
+          <tr>
+            <td class="cuvee"><span class="vintage">2021</span> <span class="wine-name">Mercurey Rouge 1er Cru Champs Martin</span><span class="type-badge">Red</span></td>
+            <td class="price">$114.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>
+
+```
